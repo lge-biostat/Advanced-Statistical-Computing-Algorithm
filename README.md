@@ -1,1 +1,1 @@
-# Advanced-Statistical-Computing-Algorithm
+# Advanced-Statistical-Computing-Algorithms
