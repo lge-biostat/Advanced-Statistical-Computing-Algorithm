@@ -35,10 +35,10 @@ hes0 <- function(theta,Y,X){       # Hessian
     fn = fn - exp_bx/(1+exp_bx)^2*x_i%*%t(x_i)
   }
   return(fn)
-}        
+}
 
 # Newton-Raphson Algorithm
-logistic_Reg_NR <- function(Y,X, fun=fun0, grd=grd0, hes=hes0, kmax=1000, 
+Newton_Raphson <- function(Y,X, fun=fun0, grd=grd0, hes=hes0, kmax=1000, 
                             tol1=1e-6){
   diff <- 10
   k <- 0
@@ -65,4 +65,4 @@ theta_true = 0.3
 p = exp(X*theta_true)/(1+exp(X*theta_true))
 Y = rbinom(N,1,p)
 
-(NR_result = logistic_Reg_NR(Y,X))
+(NR_result = Newton_Raphson(Y,X))
